@@ -41,7 +41,7 @@
 
 ```bash
 # 克隆项目
-git clone <项目地址>
+git clone https://github.com/YeWeiJu99/hdf5tool
 cd hd5ftool
 
 # 使用uv安装（推荐）
@@ -272,7 +272,7 @@ with h5py.File('data.h5', 'r') as f:
 
 ```bash
 # 克隆项目
-git clone <项目地址>
+git clone [<项目地址>](https://github.com/YeWeiJu99/hdf5tool)
 cd hdf5tool
 
 # 创建虚拟环境
@@ -287,11 +287,10 @@ pip install -e .[dev]
 python -m pytest tests/
 ```
 
-## 📞 支持与反馈
+## 📞 反馈
 
-- 📧 **问题反馈**: [GitHub Issues](<项目地址>/issues)
-- 💬 **讨论区**: [GitHub Discussions](<项目地址>/discussions)
-- 📚 **文档**: [项目Wiki](<项目地址>/wiki)
+- 📧 **问题反馈**: [GitHub Issues]([<项目地址>/issues](https://github.com/YeWeiJu99/hdf5tool/issues))
+
 
 ## 🔄 更新日志
 

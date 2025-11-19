@@ -398,7 +398,7 @@ class MainWindow(QMainWindow):
         """显示关于对话框。"""
         y = datetime.now().year
         url1 = "https://github.com/tgwoodcock/hdf5view"
-        url2 = "wait"
+        url2 = "https://github.com/YeWeiJu99/hdf5tool"
         s1 = "hdf5view开发者"
         s2 = "GitHub"
         QMessageBox.about(
