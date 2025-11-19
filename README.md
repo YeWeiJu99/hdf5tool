@@ -272,7 +272,7 @@ with h5py.File('data.h5', 'r') as f:
 
 ```bash
 # 克隆项目
-git clone [<项目地址>](https://github.com/YeWeiJu99/hdf5tool)
+git clone (https://github.com/YeWeiJu99/hdf5tool)
 cd hdf5tool
 
 # 创建虚拟环境
