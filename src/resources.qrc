@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RCC version="1.0">
+    <qresource prefix="icons">
+        <file>icons/dataset.svg</file>
+        <file>icons/folder.svg</file>
+        <file>icons/folder-open.svg</file>
+        <file>icons/hdf5view.ico</file>
+        <file>icons/hdf5view.svg</file>
+        <file>icons/image.svg</file>
+        <file>icons/plot.svg</file>
+    </qresource>
+</RCC>

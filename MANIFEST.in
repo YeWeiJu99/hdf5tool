@@ -1,0 +1,11 @@
+include README.md
+include requirements.txt
+include run.py
+include hd5ftool_main.py
+
+recursive-include src *.py
+recursive-include src *.qrc
+recursive-include src *.rcc
+recursive-include src/icons *.svg
+recursive-include config *.py
+recursive-include config *.json

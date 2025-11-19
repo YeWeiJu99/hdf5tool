@@ -1,0 +1,2 @@
+[console_scripts]
+hdf5tool = hdf5tool.__main__:main

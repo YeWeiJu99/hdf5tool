@@ -1,0 +1,10 @@
+{
+  "x_column": 0,
+  "y_columns": [
+    3,
+    4
+  ],
+  "custom_title": "",
+  "custom_x_label": "角度(Deg.)",
+  "custom_y_label": "dB"
+}
