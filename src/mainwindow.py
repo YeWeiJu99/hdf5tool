@@ -37,6 +37,9 @@ class MainWindow(QMainWindow):
 
         self.app = app
         self.setWindowTitle(WINDOW_TITLE)
+        
+        # 设置窗口图标
+        self.setWindowIcon(get_icon("hdf5tool.svg"))
 
         self.init_actions()
         self.init_menus()
@@ -395,15 +398,16 @@ class MainWindow(QMainWindow):
         """显示关于对话框。"""
         y = datetime.now().year
         url1 = "https://github.com/tgwoodcock/hdf5view"
+        url2 = "wait"
         s1 = "hdf5view开发者"
-        s2 = "根据以下条款分发"
+        s2 = "GitHub"
         QMessageBox.about(
             self,
             f"关于 {WINDOW_TITLE}",
             (
                 f"<p>hdf5tool {__version__}</p>"
-                f"<p>项目致敬<a href={url1}>{s1}</a></p>"
-                
+                f"<p>项目致敬:<a href={url1}>{s1}</a></p>"
+                f"<p>项目源码:<a href={url2}>{s2}</a></p>"
             ),
         )
 
