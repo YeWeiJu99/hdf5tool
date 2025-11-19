@@ -225,14 +225,17 @@ MIT License
 
 ## 📊 界面预览
 
-### 主界面
-![主界面](docs/screenshots/main-window.png)
-
 ### 数据浏览
-![数据浏览](docs/screenshots/data-browser.png)
+
+![数据浏览](docs/screenshots/main-window.png)
 
 ### 绘图功能
+
 ![绘图功能](docs/screenshots/plotting.png)
+
+### 图像功能
+
+![图像功能](docs/screenshots/image.png)
 
 ## 🎯 使用示例
 
@@ -305,7 +308,7 @@ python -m pytest tests/
 
 **版本**: 1.0.0  
 **最后更新**: 2025年11月  
-**开发者**: [Your Name]  
+**开发者**: [风花雪邂逅情歌]  
 **致谢**: [tgwoodcock/hdf5view](https://github.com/tgwoodcock/hdf5view)
 
 </div>
