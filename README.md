@@ -1,18 +1,41 @@
-# HDF5Tool - HDF5数据可视化工具
+# 🎯 HDF5Tool - HDF5数据可视化工具
+
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
+![PySide6](https://img.shields.io/badge/PySide6-6.4+-green?logo=qt)
+![HDF5](https://img.shields.io/badge/HDF5-3.7+-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+*基于[hdf5view](https://github.com/tgwoodcock/hdf5view)重构的现代化HDF5可视化工具*
+
+</div>
+
+## ✨ 项目特色
+
+本项目在原有hdf5view基础上进行了全面升级：
+
+- 🔄 **现代化GUI框架** - 使用PySide6替代PyQt，提供更现代的界面体验
+- 🇨🇳 **完整汉化** - 界面完全中文本地化，操作更友好
+- 📊 **专注2D可视化** - 移除"Slice"功能，专注于2D数据绘图和图像显示
+- 🖼️ **增强图像功能** - 改进图像显示模块，支持2D/3D图像数据集
+- 📤 **数据导出** - 新增CSV导出功能，便于数据分析和处理
 
 一个基于PySide6的HDF5文件可视化工具，提供直观的界面来查看、分析和导出HDF5数据。
 
-## 🚀 功能特性
+## 🚀 核心功能
 
-- 📁 **文件结构浏览** - 树形视图展示HDF5文件层次结构
-- 📊 **数据表格查看** - 表格形式显示数据集内容
-- 📈 **交互式数据绘图** - 支持多种图表类型和自定义配置
-- 🖼️ **图像显示** - 支持2D/3D图像数据集的可视化
-- 📤 **数据导出** - 将数据导出为CSV格式
-- 🔍 **数据切片** - 支持多维数据的切片查看
-- 🎯 **命令行接口** - 支持通过命令行直接打开文件
+| 功能模块 | 描述 | 图标 |
+|---------|------|------|
+| 📁 **文件结构浏览** | 树形视图展示HDF5文件层次结构，支持快速导航 | `tree_view` |
+| 📊 **数据表格查看** | 表格形式显示数据集内容，支持排序和筛选 | `table_view` |
+| 📈 **交互式数据绘图** | 支持折线图、散点图等多种图表类型，可自定义配置 | `plot_view` |
+| 🖼️ **图像显示** | 支持2D/3D图像数据集的可视化，支持缩放和旋转 | `image_view` |
+| 📤 **数据导出** | 将HDF5数据导出为CSV格式，便于后续分析 | `export_utils` |
+| 🔍 **数据切片** | 支持多维数据的切片查看，便于大数据集分析 | `dataset_view` |
+| 🎯 **命令行接口** | 支持通过命令行直接打开文件，提高工作效率 | `cli` |
 
-## 📦 安装方法
+## 📦 快速开始
 
 ### 方法一：从源码安装（推荐）
 
@@ -21,7 +44,11 @@
 git clone <项目地址>
 cd hd5ftool
 
-# 安装为可执行包
+# 使用uv安装（推荐）
+pip install uv
+uv pip install -e . -i https://pypi.mirrors.ustc.edu.cn/simple/
+
+# 或者使用传统pip安装
 pip install -e . -i https://pypi.mirrors.ustc.edu.cn/simple/
 ```
 
@@ -31,25 +58,40 @@ pip install -e . -i https://pypi.mirrors.ustc.edu.cn/simple/
 # 安装依赖
 pip install -r requirements.txt
 
-# 直接运行
+# 启动应用
 python run.py
 ```
 
-## 🛠️ 依赖库
+### 方法三：使用包管理器安装
 
-项目依赖以下Python包：
+```bash
+# 安装到系统环境
+pip install hdf5tool
 
-```txt
-PySide6>=6.4.0        # GUI框架
-h5py>=3.7.0          # HDF5文件操作
-pyqtgraph>=0.13.0    # 数据绘图
-psutil>=5.9.0        # 系统信息
-pandas>=1.5.0		# CSV导出
+# 或安装到用户环境
+pip install --user hdf5tool
 ```
 
-安装依赖：
+## 🛠️ 技术栈
+
+### 核心依赖
+
+| 依赖包 | 版本要求 | 用途 |
+|--------|----------|------|
+| **PySide6** | >=6.4.0 | 现代化GUI框架，提供跨平台界面 |
+| **h5py** | >=3.7.0 | HDF5文件读写操作，数据访问接口 |
+| **pyqtgraph** | >=0.13.0 | 高性能数据可视化，支持实时绘图 |
+| **pandas** | >=1.5.0 | 数据处理和CSV导出 |
+| **psutil** | >=5.9.0 | 系统资源监控，性能优化 |
+
+### 安装所有依赖
+
 ```bash
+# 基础安装
 pip install PySide6 h5py pyqtgraph psutil pandas
+
+# 或使用requirements.txt
+pip install -r requirements.txt
 ```
 
 ## 🎮 使用方法
@@ -181,7 +223,89 @@ MIT License
 
 欢迎提交Issue和Pull Request来改进这个项目。
 
+## 📊 界面预览
+
+### 主界面
+![主界面](docs/screenshots/main-window.png)
+
+### 数据浏览
+![数据浏览](docs/screenshots/data-browser.png)
+
+### 绘图功能
+![绘图功能](docs/screenshots/plotting.png)
+
+## 🎯 使用示例
+
+### 基本操作流程
+
+1. **启动应用** → 2. **打开HDF5文件** → 3. **浏览数据结构** → 4. **查看数据内容** → 5. **进行可视化分析**
+
+### 代码示例
+
+```python
+# 使用Python API直接操作数据
+import h5py
+
+# 打开HDF5文件
+with h5py.File('data.h5', 'r') as f:
+    # 访问数据集
+    dataset = f['/path/to/dataset']
+    data = dataset[:]
+    print(f"数据集形状: {data.shape}")
+```
+
+## 🤝 贡献指南
+
+我们欢迎各种形式的贡献！
+
+### 如何贡献
+
+1. **报告问题** - 在GitHub Issues中提交bug报告或功能请求
+2. **提交代码** - Fork项目并提交Pull Request
+3. **改进文档** - 帮助完善文档和示例
+4. **分享用例** - 分享您使用HDF5Tool的经验
+
+### 开发环境设置
+
+```bash
+# 克隆项目
+git clone <项目地址>
+cd hdf5tool
+
+# 创建虚拟环境
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# 或 venv\Scripts\activate  # Windows
+
+# 安装开发依赖
+pip install -e .[dev]
+
+# 运行测试
+python -m pytest tests/
+```
+
+## 📞 支持与反馈
+
+- 📧 **问题反馈**: [GitHub Issues](<项目地址>/issues)
+- 💬 **讨论区**: [GitHub Discussions](<项目地址>/discussions)
+- 📚 **文档**: [项目Wiki](<项目地址>/wiki)
+
+## 🔄 更新日志
+
+### v1.0.0 (2025-11)
+- ✅ 基于hdf5view重构，使用PySide6框架
+- ✅ 完整中文本地化界面
+- ✅ 增强2D绘图和图像显示功能
+- ✅ 新增CSV数据导出功能
+- ✅ 优化用户体验和性能
+
 ---
 
+<div align="center">
+
 **版本**: 1.0.0  
-**最后更新**: 2025年11月
+**最后更新**: 2025年11月  
+**开发者**: [Your Name]  
+**致谢**: [tgwoodcock/hdf5view](https://github.com/tgwoodcock/hdf5view)
+
+</div>
