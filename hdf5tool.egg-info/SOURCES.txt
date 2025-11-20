@@ -6,10 +6,6 @@ hd5ftool_main.py
 requirements.txt
 run.py
 setup.py
-./__init__.py
-./__main__.py
-./hd5ftool_main.py
-./run.py
 config/deploy_config.py
 config/plot_config.json
 hdf5tool.egg-info/PKG-INFO
@@ -28,7 +24,8 @@ src/views.py
 src/icons/dataset.svg
 src/icons/folder-open.svg
 src/icons/folder.svg
-src/icons/hdf5view.svg
+src/icons/hdf5tool.ico
+src/icons/hdf5tool.svg
 src/icons/image.svg
 src/icons/plot.svg
 src/models/__init__.py

@@ -40,21 +40,32 @@ setup(
     author="hdf5tool开发团队",
     author_email="",
     url="",
-    packages=["hdf5tool"],
-    package_dir={"hdf5tool": "."},
+    packages=find_packages() + ["src", "src.models", "src.views"],
+    package_dir={
+        "": ".",
+        "src": "src",
+        "src.models": "src/models", 
+        "src.views": "src/views"
+    },
     include_package_data=True,
     package_data={
-        "hd5ftool": [
-            "src/*.py",
-            "src/*.pyc",
-            "src/*.rcc",
-            "src/*.qrc",
-            "src/icons/*.svg",
-            "src/models/*.py",
-            "src/views/*.py",
+        "src": [
+            "*.py",
+            "*.rcc",
+            "*.qrc",
+            "icons/*.svg",
+            "icons/*.ico",
+        ],
+        "src.models": [
+            "*.py",
+        ],
+        "src.views": [
+            "*.py",
+        ],
+        "": [
             "config/*.py",
             "config/*.json",
-            "scripts/*.py",
+            "README.md",
         ]
     },
     entry_points={
